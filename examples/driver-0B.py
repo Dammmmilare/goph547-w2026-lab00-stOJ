@@ -39,6 +39,15 @@ def Part_B():
     B = np.eye(3)
     print(f'B:\n{B}')
 
-#
+# Perform element wise mrultiplication of arrays A and B to produce array C.
+    print ("\nPerforming element-wise multiplication of arrays A and B to produce array C:")
+    C = A * B
+    print(f'C:\n{C}')
+
+# Calculate the dot product of arrays A and B to produce array D.
+    print ("\nCalculating the dot product of arrays A and B to produce array D:")
+    D = np.dot(A, B)
+    print(f'D:\n{D}')
+
 if __name__ == '__main__':
     Part_B()
