@@ -27,5 +27,18 @@ def Part_B():
     print ("\nFinding the sum of odd numbers from 44 to 75:")
     print(f"Sum of odd numbers: {np.sum(odd_numbers)}")
 
+# Creating an array A with 3 rows and z3 columns
+    print ("\nCreating an array A with 3 rows and 3 columns:")
+    A = np.array([[5, 7, 2],
+                  [1, -2, 3],
+                  [4, 4, 4]])
+    print(f'A:\n{A}')
+
+# With a single command produce array B with ones in its leading diagonal and zeros elsewhere.
+    print ("\nCreating array B with ones in its leading diagonal and zeros elsewhere:")
+    B = np.eye(3)
+    print(f'B:\n{B}')
+
+#
 if __name__ == '__main__':
     Part_B()
