@@ -49,5 +49,10 @@ def Part_B():
     D = np.dot(A, B)
     print(f'D:\n{D}')
 
+# Calculating the cross product of arrays A and B to produce array E.
+    print ("\nCalculating the cross product of arrays A and B to produce array E:")
+    E = np.cross(A, B)
+    print(f'E:\n{E}')
+    
 if __name__ == '__main__':
     Part_B()
