@@ -2,7 +2,7 @@ import numpy as np
 from goph547lab00.arrays import (
 square_ones,
 )
-
+# numpy - np work.
 def Part_B():
 # Creating an array of ones with 3 rows and 5 columns.
     print ("\nCreating an array of ones with 3 rows and 5 columns:")
@@ -53,6 +53,6 @@ def Part_B():
     print ("\nCalculating the cross product of arrays A and B to produce array E:")
     E = np.cross(A, B)
     print(f'E:\n{E}')
-    
+
 if __name__ == '__main__':
     Part_B()
