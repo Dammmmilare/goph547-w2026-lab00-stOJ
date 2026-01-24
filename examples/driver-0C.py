@@ -22,6 +22,6 @@ def Part_C():
     plt.imshow(small_grey_scale, cmap=('gray'))
     plt.savefig('examples/small_rock_canyon_grey_scale version.png')
     plt.show()
-    
-#if __name__ == '__main__':
-    #Part_C()
+
+if __name__ == '__main__':
+    Part_C()
