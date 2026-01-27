@@ -77,7 +77,5 @@ def Part_C():
     plt.tight_layout()
     plt.savefig('examples/rock_canyon_RGB_summary.png', dpi=300)
     plt.show()
-
-
 if __name__ == '__main__':
     Part_C()
