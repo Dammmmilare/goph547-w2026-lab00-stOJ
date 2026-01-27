@@ -30,9 +30,81 @@ def Part_C():
     plt.show()
     print("Small grey scale image shape:", small_grey_scale.shape)
 
-    # with the x-coordinate on the horizontal axis and colour 
-    # values on the vertical axis. and with the y-coordinate on the vertical 
-    # axis and colour values on the horizontal axis
+    # Making subplots with two plots.
+    # with the x-coordinate on the horizontal axis and colour values on the vertical axis.
+    fig, (ax1, ax2) = plt.subplots(2)
+    ax1.plot(grey_scale[200, :], color='black')
+    ax1.set_title('Grey Scale Image Row 200')
+    ax2.plot(img[200, :, 0], color='red', label='Red Channel')
+    ax2.plot(img[200, :, 1], color='green', label='Green Channel')
+    ax2.plot(img[200, :, 2], color='blue', label='Blue Channel')
+    ax2.set_title('RGB Image Row 200') 
+    ax2.legend()
+    plt.tight_layout()
+    plt.savefig('examples/rock_canyon_RGB_Summary.png')
+    plt.show()
+
+    #with the y-coordinate on the vertical axis and colour values on the horizontal axis.
+    fig, (ay1, ay2) = plt.subplots(2)
+    ay1.plot(grey_scale[:, 200], color='black')
+    ay1.set_title('Grey Scale Image Column 200')
+    ay2.plot(img[:, 200, 0], color='red', label='Red Channel')
+    ay2.plot(img[:, 200, 1], color='green', label='Green Channel')
+    ay2.plot(img[:, 200, 2], color='blue', label='Blue Channel')
+    ay2.set_title('RGB Image Column 200') 
+    ay2.legend()
+    plt.tight_layout()
+    plt.savefig('examples/rock_canyon_RGB_Summary2.png')
+    plt.show()
+    
+if __name__ == '__main__':
+    Part_C()
+
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def Part_C():
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from PIL import Image
+
+    # -----------------------------
+    # Q10–11: Load and display RGB image
+    # -----------------------------
+    img = np.asarray(Image.open('examples/rock_canyon.jpg'))
+    print("RGB image shape:", img.shape)
+
+    plt.imshow(img)
+    plt.axis('off')
+    plt.show()
+
+    # -----------------------------
+    # Q12: Convert to grayscale
+    # -----------------------------
+    grey_scale = np.asarray(Image.open('examples/rock_canyon.jpg').convert("L"))
+    print("Grayscale image shape:", grey_scale.shape)
+
+    plt.imshow(grey_scale, cmap='gray')
+    plt.axis('off')
+    plt.show()
+
+    # -----------------------------
+    # Q13: Crop smaller grayscale image
+    # -----------------------------
+    y, x = grey_scale.shape
+    small_grey_scale = grey_scale[int(0.3*y):int(0.55*y),
+                                  int(0.35*x):int(0.55*x)]
+    print("Small grayscale image shape:", small_grey_scale.shape)
+
+    plt.imshow(small_grey_scale, cmap='gray')
+    plt.axis('off')
+    plt.show()
+
+    # -----------------------------
+    # Q14–16: RGB summary subplots
+    # -----------------------------
 
     # Separate RGB channels
     R = img[:, :, 0]
