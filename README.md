@@ -16,8 +16,8 @@ Here are the steps:
 
 2. Navigate to the directory where you want to store the repository files.
 For example:
-cd $HOME\Repos\Courses\goph419 # on Windows
-cd ~/Repos/Courses/goph419 # on Mac/Linux or whichever directory you prefer. [Note: It is not recommended to store repositories tracked with git and a remote GitHub under a file synchronization
+cd $HOME\Repos\Courses\goph547 # on Windows
+cd ~/Repos/Courses/goph547 # on Mac/Linux or whichever directory you prefer. [Note: It is not recommended to store repositories tracked with git and a remote GitHub under a file synchronization
 app such as Dropbox or OneDrive because the synchronization may interfere with the operation of git and cause conflicts. Rest assured that using git with a remote server achieves the ability to backup files and work from multiple different machines that is usually the purpose of using file synchronization programs.]
 
 3. If you have an SSH key setup on your machine, clone your new repository with:
